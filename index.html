@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeremee Cayde - Web/Mobile Developer</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #e0e0e0; /* Light gray text color for readability */
+            background-color: #1a1a1a; /* Dark background color */
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+        .navbar {
+            margin-bottom: 0;
+            border-bottom: 1px solid #444; /* Darker border for the navbar */
+            background-color: #333; /* Dark background for the navbar */
+        }
+        .navbar-brand, .nav-link {
+            color: #e0e0e0 !important; /* Light text color for contrast */
+        }
+        .navbar-brand:hover, .nav-link:hover {
+            color: #00aaff !important; /* Highlight color on hover */
+        }
+        .cover {
+            background: linear-gradient(45deg, #1a1a1a, #2a2a2a); /* Dark gradient background */
+            color: #e0e0e0;
+            text-align: center;
+            padding: 200px 0; /* Increased padding for larger space */
+            position: relative;
+            overflow: hidden;
+        }
+        .cover h1, .cover h2 {
+            margin: 0;
+            font-weight: 700;
+            text-transform: uppercase; /* Uppercase text for impact */
+        }
+        .cover h1 {
+            font-size: 5rem; /* Larger font size for name */
+            font-family: 'Orbitron', sans-serif; /* IT-styled font */
+        }
+        .cover h2 {
+            font-size: 3rem; /* Larger font size for title */
+            color: #00aaff; /* Highlight color for the title */
+            font-family: 'Orbitron', sans-serif; /* IT-styled font */
+        }
+        .cover h1:hover, .cover h2:hover {
+            color: #e0e0e0; /* Change color on hover */
+            cursor: pointer; /* Pointer cursor on hover */
+        }
+        .section {
+            padding: 60px 0;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            text-align: left;
+            margin-left: 15px; /* Adjust margin to your liking */
+        }
+        .about {
+            background-color: #2a2a2a; /* Dark gray */
+        }
+        .about .container {
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center; /* Center items horizontally */
+        }
+        .about .image-frame {
+            width: 150px;
+            height: 150px;
+            background-color: #444; /* Dark gray background for the frame */
+            margin-top: 20px; /* Space above the image frame */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .about .image-frame::before {
+            content: "Your Picture Here";
+            color: #888; /* Placeholder text color */
+            font-size: 1rem;
+        }
+        .resume {
+            background-color: #333; /* Slightly lighter dark gray */
+        }
+        .portfolio {
+            background-color: #2a2a2a; /* Dark gray */
+        }
+        .contact {
+            background-color: #111; /* Almost black */
+            color: #e0e0e0;
+        }
+        .section-content {
+            font-size: 1.1rem;
+            text-align: center; /* Center-align contents by default */
+        }
+        .resume-frame, .portfolio-frame {
+            background-color: #444; /* Darker background for frames */
+            padding: 20px;
+            color: #e0e0e0; /* Light text color inside frames */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        .resume-frame {
+            display: flex;
+            justify-content: center; /* Center iframe horizontally */
+            align-items: center; /* Center iframe vertically */
+        }
+        .resume-frame iframe {
+            width: 850px; /* Width equivalent to approximately one page of a document */
+            height: 1050px; /* Height equivalent to approximately one page of a document */
+            border: none;
+        }
+        .contact .container {
+            text-align: left; /* Left-align contents in the contact section */
+        }
+        .contact .section-title {
+            text-align: center; /* Center-align the contact header */
+        }
+        .contact a {
+            color: #00aaff; /* Highlight color for links */
+        }
+        .contact a:hover {
+            color: #e0e0e0; /* Light color on hover */
+        }
+        @keyframes backgroundAnimation {
+            0% { background-color: #1a1a1a; }
+            50% { background-color: #2a2a2a; }
+            100% { background-color: #1a1a1a; }
+        }
+        .cover {
+            animation: backgroundAnimation 10s ease infinite;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand" href="#">Jeremee Cayde</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#resume">Resume</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="cover">
+        <h1>Jeremee Cayde</h1>
+        <h2>Web/Mobile Developer</h2>
+    </div>
+
+    <div id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="image-frame"></div> <!-- Temporary frame for your picture -->
+            <div>
+                <p class="section-content">As a 4th-year IT student, I am focused on becoming a proficient mobile and web developer. My 
+                    background in networking complements my development capabilities, enabling me to approach projects with a well
+                    rounded perspective. I am eager to join a forward-thinking company where I can gain practical experience, 
+                    contribute to innovative projects, and continue advancing my career in a challenging and supportive environment. </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="resume" class="section resume">
+        <div class="container">
+            <h2 class="section-title">Resume</h2>
+            <div class="resume-frame">
+                <iframe src="cayde-new-resumer.pdf" type="application/pdf"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio" class="section portfolio">
+        <div class="container">
+            <h2 class="section-title">Portfolio</h2>
+            <div class="portfolio-frame">
+                <p>Portfolio works will be displayed here. <a href="#Portfolio">Go to Portfolio</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-content">LinkedIn: <a href="https://www.linkedin.com/in/your-profile">Your LinkedIn</a></p>
+            <p class="section-content">Telegram: <a href="@Kayjoclr">Your Telegram</a></p>
+            <p class="section-content">Contact Number: 09260261769 | 09471167935</p>
+            <p class="section-content">Email: caydejeremee@gmail.com</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
