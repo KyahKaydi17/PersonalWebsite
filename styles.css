@@ -1,0 +1,172 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #e0e0e0; /* Light gray text color for readability */
+    background-color: #1a1a1a; /* Dark background color */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.navbar {
+    margin-bottom: 0;
+    border-bottom: 1px solid #444; /* Darker border for the navbar */
+    background-color: #333; /* Dark background for the navbar */
+}
+
+.navbar-brand, .nav-link {
+    color: #e0e0e0 !important; /* Light text color for contrast */
+}
+
+.navbar-brand:hover, .nav-link:hover {
+    color: #00aaff !important; /* Highlight color on hover */
+}
+
+.cover {
+    background: linear-gradient(45deg, #1a1a1a, #2a2a2a); /* Dark gradient background */
+    color: #e0e0e0;
+    text-align: center;
+    padding: 200px 0; /* Increased padding for larger space */
+    position: relative;
+    overflow: hidden;
+    animation: backgroundAnimation 10s ease infinite;
+}
+
+.cover h1, .cover h2 {
+    margin: 0;
+    font-weight: 700;
+    text-transform: uppercase; /* Uppercase text for impact */
+}
+
+.cover h1 {
+    font-size: 5rem; /* Larger font size for name */
+    font-family: 'Orbitron', sans-serif; /* IT-styled font */
+}
+
+.cover h2 {
+    font-size: 3rem; /* Larger font size for title */
+    color: #00aaff; /* Highlight color for the title */
+    font-family: 'Orbitron', sans-serif; /* IT-styled font */
+}
+
+.cover h1:hover, .cover h2:hover {
+    color: #e0e0e0; /* Change color on hover */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.section {
+    padding: 60px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center; /* Centered headings */
+}
+
+.about-content {
+    display: flex;
+    align-items: flex-start; /* Align items at the start of the cross axis */
+    justify-content: center; /* Center items horizontally within the container */
+    gap: 30px; /* Increased space between image and text */
+}
+
+.image-frame {
+    width: 360px; /* Increase width of the frame */
+    height: 360px; /* Increase height of the frame */
+    background-color: #444; /* Dark gray background for the frame */
+    border-radius: 10px; /* Slightly rounded corners */
+    overflow: hidden; /* Ensure image doesn't overflow */
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure image covers the frame while maintaining aspect ratio */
+}
+
+.about-text {
+    max-width: 600px; /* Set a max width for the text area */
+}
+
+
+.resume {
+    background-color: #333; /* Slightly lighter dark gray */
+}
+
+.portfolio {
+    background-color: #2a2a2a; /* Dark gray */
+}
+
+.contact {
+    background-color: #111; /* Almost black */
+    color: #e0e0e0;
+}
+
+.section-content {
+    font-size: 1.1rem;
+    text-align: center; /* Center-align contents by default */
+}
+
+.resume-frame, .portfolio-frame {
+    background-color: #444; /* Darker background for frames */
+    padding: 20px;
+    color: #e0e0e0; /* Light text color inside frames */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.resume-frame {
+    display: flex;
+    justify-content: center; /* Center iframe horizontally */
+    align-items: center; /* Center iframe vertically */
+}
+
+.resume-frame iframe {
+    width: 850px; /* Width equivalent to approximately one page of a document */
+    height: 1050px; /* Height equivalent to approximately one page of a document */
+    border: none;
+}
+
+.contact .container {
+    text-align: left; /* Left-align contents in the contact section */
+}
+
+.contact .section-title {
+    text-align: center; /* Center-align the contact header */
+}
+
+.contact a {
+    color: #00aaff; /* Highlight color for links */
+}
+
+.contact a:hover {
+    color: #e0e0e0; /* Light color on hover */
+}
+
+@keyframes backgroundAnimation {
+    0% { background-color: #1a1a1a; }
+    50% { background-color: #2a2a2a; }
+    100% { background-color: #1a1a1a; }
+}
+
+.cert-image {
+    width: 100%;
+    height: auto;
+    max-width: 200px; /* Set a max-width for the certificate images */
+    max-height: 150px; /* Set a max-height for the certificate images */
+}
+
+.view-more-btn {
+    background-color: #00aaff; /* Highlight color for button */
+    color: #e0e0e0; /* Light text color */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.view-more-btn:hover {
+    background-color: #0088cc; /* Darker highlight color on hover */
+}
