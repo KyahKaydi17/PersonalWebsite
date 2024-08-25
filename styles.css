@@ -72,8 +72,8 @@ body {
 }
 
 .image-frame {
-    width: 360px; /* Increase width of the frame */
-    height: 360px; /* Increase height of the frame */
+    width: 200px; /* Increase width of the frame */
+    height: 200px; /* Increase height of the frame */
     background-color: #444; /* Dark gray background for the frame */
     border-radius: 10px; /* Slightly rounded corners */
     overflow: hidden; /* Ensure image doesn't overflow */
@@ -88,7 +88,6 @@ body {
 .about-text {
     max-width: 600px; /* Set a max width for the text area */
 }
-
 
 .resume {
     background-color: #333; /* Slightly lighter dark gray */
@@ -127,21 +126,38 @@ body {
     border: none;
 }
 
-.contact .container {
-    text-align: left; /* Left-align contents in the contact section */
+.contact {
+    background-color: #111; /* Dark background for the contact section */
+    color: #e0e0e0; /* Light text color */
+    padding: 60px 0; /* Padding for top and bottom */
 }
 
 .contact .section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 30px;
     text-align: center; /* Center-align the contact header */
 }
 
-.contact a {
-    color: #00aaff; /* Highlight color for links */
+.contact-info {
+    text-align: center; /* Center-align the contact information */
 }
 
-.contact a:hover {
-    color: #e0e0e0; /* Light color on hover */
+.contact-info p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
 }
+
+.contact-info a {
+    color: #00aaff; /* Highlight color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.contact-info a:hover {
+    color: #e0e0e0; /* Light color on hover */
+    text-decoration: underline; /* Underline on hover for better accessibility */
+}
+
 
 @keyframes backgroundAnimation {
     0% { background-color: #1a1a1a; }
@@ -154,19 +170,20 @@ body {
     height: auto;
     max-width: 200px; /* Set a max-width for the certificate images */
     max-height: 150px; /* Set a max-height for the certificate images */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for effects */
+    cursor: pointer; /* Pointer cursor on hover */
 }
 
-.view-more-btn {
-    background-color: #00aaff; /* Highlight color for button */
-    color: #e0e0e0; /* Light text color */
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+.cert-image:hover {
+    transform: scale(1.1); /* Slightly zoom in on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Shadow effect on hover */
 }
 
-.view-more-btn:hover {
-    background-color: #0088cc; /* Darker highlight color on hover */
+.modal-dialog {
+    max-width: 90%; /* Make modal responsive */
+}
+
+.modal-content img {
+    max-width: 100%;
+    height: auto;
 }
