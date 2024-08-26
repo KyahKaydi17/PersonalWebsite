@@ -187,3 +187,84 @@ body {
     max-width: 100%;
     height: auto;
 }
+
+.dark-mode-toggle {
+    margin-right: 20px; /* Adds space from the right edge */
+    cursor: pointer;
+}
+
+.dark-mode-toggle img {
+    width: 30px; /* Adjust size of the toggle icon */
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.dark-mode-toggle img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.skills {
+    background-color: #2a2a2a; /* Background color for the skills section */
+    padding: 60px 0; /* Padding for top and bottom */
+    color: #e0e0e0; /* Light text color */
+}
+
+.skills-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.skills-list {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Space between skill items */
+}
+
+.skill-item {
+    width: 150px; /* Fixed width for skill items */
+    text-align: center;
+}
+
+.skill-item img {
+    width: 100px; /* Fixed size for skill icons */
+    height: 100px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+.testimonials {
+    background-color: #1a1a1a; /* Dark background for testimonials */
+    padding: 60px 0;
+    color: #e0e0e0;
+}
+
+.testimonials-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.testimonial-item {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.testimonial-item p {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.testimonial-item .author {
+    font-weight: 600;
+    color: #00aaff; /* Highlight color for author name */
+}
+

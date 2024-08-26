@@ -40,3 +40,5 @@ document.getElementById('viewMoreBtn').addEventListener('click', function() {
     // Remove the view more button after clicking
     this.style.display = 'none';
 });
+
+
