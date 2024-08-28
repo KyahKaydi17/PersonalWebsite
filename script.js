@@ -6,6 +6,16 @@ document.querySelectorAll('.cert-image').forEach(img => {
     });
 });
 
+// Certification fade-in effect on load
+document.addEventListener('DOMContentLoaded', function() {
+    const certs = document.querySelectorAll('.cert-image');
+    certs.forEach((cert, index) => {
+        setTimeout(() => {
+            cert.style.opacity = '1';
+        }, index * 100); // Stagger the animations
+    });
+});
+
 document.getElementById('viewMoreBtn').addEventListener('click', function() {
     const newCerts = [
         { id: 'cert5', src: 'cert5.png', alt: 'Certification 5' },
@@ -35,10 +45,14 @@ document.getElementById('viewMoreBtn').addEventListener('click', function() {
             modalImage.src = this.src;
             $('#certModal').modal('show');
         });
+
+        // Apply fade-in effect to new certifications
+        certImg.style.opacity = '0';
+        setTimeout(() => {
+            certImg.style.opacity = '1';
+        }, 100);
     });
 
     // Remove the view more button after clicking
     this.style.display = 'none';
 });
-
-

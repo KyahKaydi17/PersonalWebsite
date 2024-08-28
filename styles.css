@@ -268,3 +268,48 @@ body {
     color: #00aaff; /* Highlight color for author name */
 }
 
+
+/* Testimonial Slideshow */
+.carousel-inner {
+    text-align: center;
+    color: #e0e0e0;
+}
+
+.carousel-item {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(100%);
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Certification Section Enhancements */
+.certifications-preview .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Added gap between certification items */
+    justify-content: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Keyframes for fadeIn effect */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.cert-image {
+    animation: zoomIn 0.5s ease-in-out;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+

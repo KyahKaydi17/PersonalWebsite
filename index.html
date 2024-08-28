@@ -167,25 +167,44 @@
         </div>
     </section>
     
-    <section class="testimonials">
-        <div class="container">
-            <h2 class="testimonials-title">Testimonials</h2>
-            <div class="testimonial-item">
-                <p>"Jeremee Cayde demonstrates expertise in HTML, CSS, Python, and Android development. His diverse skill set allows him to handle various tasks with precision and efficiency."</p>
-                <p class="author">- John Louie Ubias</p>
+   <!-- Add the following below the current testimonials section -->
+<div class="testimonials">
+    <div class="container">
+        <h2 class="testimonials-title">Testimonials</h2>
+        <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="testimonial-item">
+                        <p>"This is the best service I have ever used!"</p>
+                        <p class="author">- John Doe</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="testimonial-item">
+                        <p>"Highly recommend to everyone!"</p>
+                        <p class="author">- Jane Smith</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="testimonial-item">
+                        <p>"Exceptional quality and great support!"</p>
+                        <p class="author">- Alex Johnson</p>
+                    </div>
+                </div>
             </div>
-            <div class="testimonial-item">
-                <p>"I highly recommend Mr. Jeremee Cayde for any project management role in IT. He is diligent, reliable, and consistently delivers exceptional results. Jeremee demonstrates unwavering dedication to his work, adeptly handling challenges and producing high-quality outcomes efficiently. "</p>
-                <p class="author">- Benedict Fernandez</p>
-            </div>
-
-            <div class="testimonial-item">
-                <p>"I am delighted to recommend Jeremee Cayde for his outstanding leadership qualities and proficiency in a diverse array of programming languages. Jeremee has consistently displayed exemplary leadership skills, effectively guiding teams towards successful project outcomes."</p>
-                <p class="author">- Sean Ysagun</p>
-            </div>
-            <!-- Add more testimonials as needed -->
+            <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
-    </section>
+    </div>
+</div>
+
+    
     
 
     <div id="contact" class="section contact">
