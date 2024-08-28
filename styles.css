@@ -1,3 +1,6 @@
+/* Existing styles are preserved */
+
+/* Body */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -5,24 +8,32 @@ body {
     color: #e0e0e0; /* Light gray text color for readability */
     background-color: #1a1a1a; /* Dark background color */
     overflow-x: hidden; /* Prevent horizontal scroll */
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
+/* Navbar */
 .navbar {
     margin-bottom: 0;
     border-bottom: 1px solid #444; /* Darker border for the navbar */
     background-color: #333; /* Dark background for the navbar */
+    transition: background-color 0.5s ease;
 }
 
 .navbar-brand, .nav-link {
     color: #e0e0e0 !important; /* Light text color for contrast */
+    transition: color 0.3s ease;
 }
 
 .navbar-brand:hover, .nav-link:hover {
     color: #00aaff !important; /* Highlight color on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
+/* Cover */
 .cover {
     background-image: url('BG.jfif');
+    background-size: cover; /* Ensures the image covers the entire space */
+    background-repeat: no-repeat; /* Prevents repetition of the image */
     color: #e0e0e0;
     text-align: center;
     padding: 200px 0; /* Increased padding for larger space */
@@ -40,12 +51,15 @@ body {
 .cover h1 {
     font-size: 5rem; /* Larger font size for name */
     font-family: 'Orbitron', sans-serif; /* IT-styled font */
+    color: #ff4081; /* Vibrant pink for a lively touch */
+    transition: color 0.3s ease;
 }
 
 .cover h2 {
     font-size: 3rem; /* Larger font size for title */
     color: #00aaff; /* Highlight color for the title */
     font-family: 'Orbitron', sans-serif; /* IT-styled font */
+    transition: color 0.3s ease;
 }
 
 .cover h1:hover, .cover h2:hover {
@@ -53,6 +67,7 @@ body {
     cursor: pointer; /* Pointer cursor on hover */
 }
 
+/* Section */
 .section {
     padding: 60px 0;
 }
@@ -62,8 +77,26 @@ body {
     font-weight: 600;
     margin-bottom: 30px;
     text-align: center; /* Centered headings */
+    color: #ff4081; /* Vibrant pink color for section titles */
+    position: relative;
+    transition: color 0.3s ease;
 }
 
+.section-title::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background-color: #00aaff;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+
+.section-title:hover {
+    color: #00aaff;
+}
+
+/* About Content */
 .about-content {
     display: flex;
     align-items: flex-start; /* Align items at the start of the cross axis */
@@ -77,6 +110,12 @@ body {
     background-color: #444; /* Dark gray background for the frame */
     border-radius: 10px; /* Slightly rounded corners */
     overflow: hidden; /* Ensure image doesn't overflow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-frame:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
 }
 
 .profile-img {
@@ -85,51 +124,58 @@ body {
     object-fit: cover; /* Ensure image covers the frame while maintaining aspect ratio */
 }
 
+/* Text enhancements */
 .about-text {
     max-width: 600px; /* Set a max width for the text area */
+    color: #ffffff; /* White text for contrast */
+    transition: color 0.3s ease;
 }
 
+.about-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+}
+
+.about-text p:hover {
+    color: #00aaff;
+}
+
+/* Resume Section */
 .resume {
     background-color: #333; /* Slightly lighter dark gray */
+    transition: background-color 0.3s ease;
 }
 
-.portfolio {
-    background-color: #2a2a2a; /* Dark gray */
-}
-
-.contact {
-    background-color: #111; /* Almost black */
-    color: #e0e0e0;
-}
-
-.section-content {
-    font-size: 1.1rem;
-    text-align: center; /* Center-align contents by default */
-}
-
-.resume-frame, .portfolio-frame {
+.resume-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #444; /* Darker background for frames */
     padding: 20px;
     color: #e0e0e0; /* Light text color inside frames */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-.resume-frame {
-    display: flex;
-    justify-content: center; /* Center iframe horizontally */
-    align-items: center; /* Center iframe vertically */
-}
-
 .resume-frame iframe {
-    width: 850px; /* Width equivalent to approximately one page of a document */
-    height: 1050px; /* Height equivalent to approximately one page of a document */
+    width: 100%; /* Use full width of the container */
+    max-width: 1000px; /* Adjust max-width as needed */
+    height: 1200px; /* Adjust height as needed */
     border: none;
 }
 
+
+/* Portfolio Section */
+.portfolio {
+    background-color: #2a2a2a; /* Dark gray */
+    transition: background-color 0.3s ease;
+}
+
+/* Contact Section */
 .contact {
-    background-color: #111; /* Dark background for the contact section */
-    color: #e0e0e0; /* Light text color */
-    padding: 60px 0; /* Padding for top and bottom */
+    background-color: #111; /* Almost black */
+    color: #e0e0e0;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .contact .section-title {
@@ -140,31 +186,23 @@ body {
 }
 
 .contact-info {
-    text-align: center; /* Center-align the contact information */
+    display: flex;
+    justify-content: center; /* Center align the items horizontally */
+    flex-wrap: wrap; /* Allow wrapping if necessary */
+    gap: 20px; /* Space between items */
 }
 
-.contact-info p {
+.contact-info p, .contact-info a {
+    margin: 0; /* Remove default margins */
     font-size: 1.2rem;
-    margin-bottom: 15px;
-}
-
-.contact-info a {
-    color: #00aaff; /* Highlight color for links */
-    text-decoration: none; /* Remove underline from links */
 }
 
 .contact-info a:hover {
-    color: #e0e0e0; /* Light color on hover */
+    color: #ff4081; /* Vibrant pink on hover */
     text-decoration: underline; /* Underline on hover for better accessibility */
 }
 
-
-@keyframes backgroundAnimation {
-    0% { background-color: #1a1a1a; }
-    50% { background-color: #2a2a2a; }
-    100% { background-color: #1a1a1a; }
-}
-
+/* Certification Section */
 .cert-image {
     width: 100%;
     height: auto;
@@ -179,6 +217,7 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Shadow effect on hover */
 }
 
+/* Modal */
 .modal-dialog {
     max-width: 90%; /* Make modal responsive */
 }
@@ -188,6 +227,7 @@ body {
     height: auto;
 }
 
+/* Dark Mode Toggle */
 .dark-mode-toggle {
     margin-right: 20px; /* Adds space from the right edge */
     cursor: pointer;
@@ -203,6 +243,7 @@ body {
     transform: scale(1.1); /* Slight zoom on hover */
 }
 
+/* Skills Section */
 .skills {
     background-color: #2a2a2a; /* Background color for the skills section */
     padding: 60px 0; /* Padding for top and bottom */
@@ -214,6 +255,7 @@ body {
     font-weight: 600;
     margin-bottom: 30px;
     text-align: center;
+    color: #ff4081; /* Vibrant pink for section titles */
 }
 
 .skills-list {
@@ -238,7 +280,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-
+/* Testimonial Section */
 .testimonials {
     background-color: #1a1a1a; /* Dark background for testimonials */
     padding: 60px 0;
@@ -250,6 +292,7 @@ body {
     font-weight: 600;
     margin-bottom: 30px;
     text-align: center;
+    color: #ff4081; /* Vibrant pink color for section titles */
 }
 
 .testimonial-item {
@@ -261,74 +304,53 @@ body {
     font-size: 1.2rem;
     font-style: italic;
     margin-bottom: 15px;
+    color: #00aaff; /* Highlight color for testimonial text */
 }
 
 .testimonial-item .author {
-    font-weight: 600;
-    color: #00aaff; /* Highlight color for author name */
+    font-weight: bold;
+    color: #e0e0e0; /* Light text color for author names */
 }
 
-
-/* Testimonial Slideshow */
-.carousel-inner {
-    text-align: center;
-    color: #e0e0e0;
+/* Animation for background */
+@keyframes backgroundAnimation {
+    0% { background-position: 0 0; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0 0; }
 }
 
-.carousel-item {
-    transition: transform 0.5s ease, opacity 0.5s ease;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cover {
+        padding: 100px 0; /* Adjust padding for smaller screens */
+    }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    filter: invert(100%);
-}
+    .about-content {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center;
+    }
 
-.carousel-control-prev:hover .carousel-control-prev-icon,
-.carousel-control-next:hover .carousel-control-next-icon {
-    transform: scale(1.1); /* Slight zoom on hover */
-}
+    .image-frame {
+        width: 150px; /* Adjust frame size for smaller screens */
+        height: 150px;
+    }
 
-/* Certification Section Enhancements */
-.certifications-preview .row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Added gap between certification items */
-    justify-content: center;
-    animation: fadeIn 1s ease-in-out;
-}
+    .profile-img {
+        width: 100%;
+        height: 100%;
+    }
 
-/* Keyframes for fadeIn effect */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
+    .skills-list {
+        flex-direction: column; /* Stack skills vertically */
+        align-items: center;
+    }
 
-.cert-image {
-    animation: zoomIn 0.5s ease-in-out;
-}
+    .skill-item {
+        margin-bottom: 20px; /* Space between skill items */
+    }
 
-@keyframes zoomIn {
-    from { transform: scale(0.9); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-}
-
-/* Center the images in the modal */
-.cert-img-modal {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-/* Style the teal button */
-.btn-teal {
-    background-color: #008080; /* Teal color */
-    color: #ffffff; /* White text */
-    border: none;
-}
-
-.btn-teal:hover {
-    background-color: #004d4d; /* Darker teal color */
+    .testimonial-item {
+        margin-bottom: 20px; /* Space between testimonials */
+    }
 }
 
