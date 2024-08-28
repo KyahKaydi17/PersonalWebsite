@@ -22,7 +22,7 @@ body {
 }
 
 .cover {
-    background: linear-gradient(45deg, #1a1a1a, #2a2a2a); /* Dark gradient background */
+    background-image: url('BG.jfif');
     color: #e0e0e0;
     text-align: center;
     padding: 200px 0; /* Increased padding for larger space */
@@ -311,5 +311,24 @@ body {
 @keyframes zoomIn {
     from { transform: scale(0.9); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
+}
+
+/* Center the images in the modal */
+.cert-img-modal {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Style the teal button */
+.btn-teal {
+    background-color: #008080; /* Teal color */
+    color: #ffffff; /* White text */
+    border: none;
+}
+
+.btn-teal:hover {
+    background-color: #004d4d; /* Darker teal color */
 }
 
